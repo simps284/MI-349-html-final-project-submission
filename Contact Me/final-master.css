@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 100;
+    color: red;
+}
+
+h3 {
+    color: lightseagreen;
+}
+
+img {
+    width: 50%;
+}
+
+/* Floats and old-school positioning */
+.float header {
+    background: white;
+    padding: 20px;
+}
+.float aside {
+    float: left;
+    background: gray;
+    padding: 20px;
+}
+
+.float article {
+    background: red;
+    padding: 20px 20px 20px 220px;
+}
+
+.float footer {
+    clear: both;
+    background: blue;
+    padding: 20px;
+}
+
+/* Float Responsive */
+
+.float {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+@media all and (max-width: 1024px) {
+    .float aside {
+        float: none;
+    }
+
+    .float article {
+        padding: 20px;
+    }
+}
+
+@media all and (max-width: 839px) {
+    .float {
+        margin: 0;
+        width: inherit;
+    }
+}
+
+@media all and (max-width: 480px) {
+}
+
+/* Flexbox */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex header {
+    background: white;
+    padding: 0px;
+    flex: 0 0 100%;
+}
+
+.flex aside {
+    background: gray;
+    padding: 0px;
+    flex: 0 0 100%;
+    text-align: center
+}
+
+.flex article {
+    background: green;
+    padding: 15px;
+    flex: 0 0 100%;
+}
+
+.flex footer {
+    background: white;
+    padding: 20px;
+    flex: 0 0 50%;
+}
+
+.links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.links li {
+    width: 80px;
+    display: inline-block;
+    padding: 20px 20px;
+}
+
+
+.links li a img:hover {
+    opacity: 0.5;
+    transition: opacity ease-in-out 0.2s;
+}
+/* CSS Grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10vw 30vw 10vw;
+    grid-gap: 0;
+}
+
+.grid header {
+    background: blueviolet;
+    padding: 20px;
+    grid-column: 1 / span 2;
+}
+
+.grid aside {
+    background: gray;
+    padding: 20px;
+}
+
+.grid article {
+    background: red;
+    padding: 20px;
+}
+
+.grid footer {
+    background: blue;
+    padding: 20px;
+    grid-column: 1 / span 2;
+
+}
